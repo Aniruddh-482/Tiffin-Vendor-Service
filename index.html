@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tiffin Vendor Service</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <section class="colored-section" id="title">
+
+      <div class="row">
+        
+        <div class="col-lg-6">
+
+          <div class="container-fluid">
+
+            <!-- Nav Bar -->
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+
+              <img class="image" src="images\tiffin-dilivery.png" alt="tiffin-dilivery">
+              <a class="navbar-brand">Tiffin Vendor Service</a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                <ul class="navbar-nav ml-auto">
+
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="OpenLoginForm()">Login</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="OpenRegisterForm()">Register</a>
+                  </li>
+
+                </ul>
+
+              </div>
+              
+            </nav>
+
+            <!-- Title -->
+
+            <h1 class="big-heading">Get your tiffin now.</h1>
+            <h2>Order food from favourite restaurants near you.</h2>
+
+            <!-- Search bar -->
+          
+            <div class="wrap">
+              <div class="search">
+                 <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                 <button type="submit" class="searchButton">
+                   <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Title Image -->
+    
+        <div class="col-lg-6">
+          <img class="title-image" src="images\title-1.jpg" alt="title-image">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Login Popup -->
+
+    <div class="form-popup" id="Login">
+    
+      <form action="/action_page.php" class="form-container">
+    
+        <label class="close-btn" title="close" onclick="CloseLoginForm()"><b>🗙</b></label>
+        <div class="titletext">Login</div>
+        <div class="field">
+          <input type="text" placeholder="Email Address" name="email" required>
+        </div>
+
+        <div class="field">
+          <input type="password" placeholder="Password" name="psw" required>
+        </div>
+        
+        <div class="pass-link"><a href="#">Forgot password?</a></div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="signup-link">Not a member? <a onclick="OpenRegisterForm()">Signup now</a></div>
+    
+      </form>
+    
+    </div>
+
+    <!-- Signup Popup -->
+
+    <div class="form-popup" id="Register">
+    
+      <form action="/action_page.php" class="form-container">
+    
+        <label class="close-btn" title="close" onclick="CloseRegisterForm()"><b>🗙</b></label>
+        <div class="titletext">Register</div>
+        <div class="field">
+          <input type="tel" placeholder="Phone number" name="phone" required>
+        </div>
+        
+        <div class="field">
+          <input type="text" placeholder="Name" name="name" required>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Address" name="address" required>
+        </div>
+
+        <div class="field">
+          <input type="text" placeholder="Email Address" name="email" required>
+        </div>
+
+        <div class="field">
+          <input type="password" placeholder="Password" name="psw" required>
+        </div>
+        
+        <button type="submit" class="btn">Register</button>
+    
+      </form>
+    
+    </div>
+
+
+    <!-- Back to top button -->
+        
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    
+    <!-- Features -->
+
+    <section class="white-section" id="features">
+
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-check-circle fa-4x"></i>
+            <h3 class="feature-title">Easy to use.</h3>
+            <p>So easy to use, even your kid could do it.</p>
+          </div>
+
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-bullseye fa-4x"></i>
+            <h3 class="feature-title">Elite Clientele</h3>
+            <p>We have all the tiffin centers, healthy, hygenic & cheap.</p>
+          </div>
+
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-heart fa-4x"></i>
+            <h3 class="feature-title">Guaranteed to work.</h3>
+            <p>Hygenic and affordable food plans for you.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- Reviews -->
+
+    <section class="colored-section" id="testimonials">
+
+      <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active container-fluid">
+            <img class="testimonial-image" src="images/title-2.jpg" alt="title-image">
+            <h2 class="testimonial-text">🧡🧡🧡🧡</h2>
+            <h2 class="testimonial-text">"Lovely Food 100% recommended. very fast delivery and piping hot brilliant."</h2>
+            <em>Aditi Sharma</em>
+          </div>
+          <div class="carousel-item container-fluid">
+            <img class="testimonial-image" src="images/title-3.jpg" alt="title-image">
+            <h2 class="testimonial-text">🧡🧡🧡🧡🧡</h2>
+            <h2 class="testimonial-text">"I am very happy with the food I ordered the quality was amazing and te customer service was great."</h2>
+            <em>Abhishek Dewda</em>
+          </div>
+          <div class="carousel-item container-fluid">
+            <img class="testimonial-image" src="images/title-4.jpg" alt="title-image">
+            <h2 class="testimonial-text">🧡🧡🧡🧡🧡</h2>
+            <h2 class="testimonial-text">"Tried so many tiffins centers but glad i have found a good tiffin center where food is good!!!"</h2>
+            <em>Jitendra Solanki</em>
+          </div>
+          <div class="carousel-item container-fluid">
+            <img class="testimonial-image" src="images/title-5.jpg" alt="title-image">
+            <h2 class="testimonial-text">🧡🧡🧡🧡</h2>
+            <h2 class="testimonial-text">"Fantastic service and food"</h2>
+            <em>Harsh Choubey</em>
+          </div>
+          <div class="carousel-item container-fluid">
+            <img class="testimonial-image" src="images/title-6.jpg" alt="title-image">
+            <h2 class="testimonial-text">🧡🧡🧡🧡🧡</h2>
+            <h2 class="testimonial-text">"It's a complete package....quantity,quality,taste and PRICE!"</h2>
+            <em>Badal Arya</em>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- Pricing -->
+
+    <section class="white-section" id="pricing">
+
+      <h2 class="section-heading">Tiffin Centers Near you!</h2>
+      <p>Hygenic and affordable food plans for you</p>
+
+      <div class="row">
+
+        <div class="pricing-column col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Bholenath Tiffin Center</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="price-text">₹2000 / mo</h2>
+              <p>2 Sabji</p>
+              <p>5 Roti</p>
+              <p>Rice</p>
+              <p>dal</p>
+              <p>Sunday Special</p>
+              <button class="btn btn-lg btn-block btn-outline-dark" type="button" onclick="OpenLoginForm()">Login</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-column col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h3>Maheshwari Tiffin Center</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="price-text">₹1700 / mo</h2>
+              <p>1 Sabji</p>
+              <p>5 Roti</p>
+              <p>Rice</p>
+              <p>dal</p>
+              <p>Sunday Special</p>
+              <button class="btn btn-lg btn-block btn-outline-dark" type="button" onclick="OpenLoginForm()">Login</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-column col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h3>Universal Tiffin Center</h3>
+            </div>
+            <div class="card-body">
+              <h2 class="price-text">₹2400 / mo</h2>
+              <p>2 Sabji+5 Roti</p>
+              <p>Rice</p>
+              <p>dal</p>
+              <p>salad</p>
+              <p>Sunday Special</p>
+              <button class="btn btn-lg btn-block btn-outline-dark" type="button" onclick="OpenLoginForm()">Login</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button type="button" class="btn btn-outline-info btn-lg" onclick="OpenLoginForm()">View all 🡪</button>
+      
+      <br>
+
+    </section>
+
+
+    <!-- Call to Action -->
+
+    <section class="colored-section" id="cta">
+
+      <div class="container-fluid">
+
+        <h3 class="big-heading">Choose Your Favorite Tiffin Center 🥘!</h3>
+        <button class="download-button btn btn-lg btn-dark" type="button" onclick="OpenLoginForm()">Login</button>
+        <button class="download-button btn btn-lg brn-light" type="button" onclick="OpenRegisterForm()">Register</button>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="white-section" id="footer">
+      <div class="container-fluid">
+        <a href="https://www.facebook.com/">
+          <i class="social-icon fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/i/flow/login">
+          <i class="social-icon fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/">
+          <i class="social-icon fab fa-instagram"></i>
+        </a>
+        <a href="mailto:demomail@gmail.com">
+          <i class="social-icon fas fa-envelope"></i>
+        </a>
+        <p>© Copyright 2022 Tiffin Vendor Service</p>
+      </div>
+    </footer>
+    
+    <!-- Javascript -->
+    <script>
+
+      //Back to top button
+      let mybutton = document.getElementById("btn-back-to-top");
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      mybutton.addEventListener("click", backToTop);
+
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      // For login Popup
+      function OpenLoginForm() {
+      document.getElementById("Login").style.display = "block";
+      }
+
+      function CloseLoginForm() {
+        document.getElementById("Login").style.display = "none";
+      }
+
+      // For SignUp Popup
+      function OpenRegisterForm() {
+      document.getElementById("Register").style.display = "block";
+      }
+
+      function CloseRegisterForm() {
+        document.getElementById("Register").style.display = "none";
+      }
+
+    </script>
+
+  </body>
+
+</html>
